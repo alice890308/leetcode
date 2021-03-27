@@ -39,6 +39,7 @@ private:
         
         if (row < 0 || row >= matrix.size()) return false;
         if (col < 0 || col >= matrix[row].size()) return false;
+        if (visited[row][col]) return false;
         if (limit_steps == updated[row][col]) {
             return true;
         }
